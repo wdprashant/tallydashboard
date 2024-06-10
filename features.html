@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jqerry.js"></script>
+    <script src="assets/js/script.js"></script>
+    <link rel="stylesheet" ef="https://cdnjs.cloudflare.com/ajax/libs/font-aw  <link rel=" stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+    <div class="full-container">
+        <div class="inner-section bg">
+            <!-- sidebar  start-->
+            <nav id="sidebar">
+                <div class="logo">
+                    <h2>TallyFlow.</h2>
+                </div>
+                <ul class="nav" id="nav">
+                    <li class="nav-item">
+                        <img src="assets/svg/dashboard.svg" alt="icons" />
+                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/accounting.svg" alt="icons" />
+                        <a class="nav-link" href="accountig.html"> Accounting </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/sales.svg" alt="icons" />
+                        <a class="nav-link" href="sales.html"> Sales </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/purchage.svg" alt="icons" />
+                        <a class="nav-link" href="purchase.html">
+                            Purchase
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/master.svg" alt="icons" />
+                        <a class="nav-link" href="master.html"> Master </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <img src="assets/svg/gst-return.svg" alt="icons" />
+                        <a class="nav-link" href="Gst_return.html"> GST Return </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/document.svg" alt="icons" />
+                        <a class="nav-link" href="document.html"> Document </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/features.svg" alt="icons" />
+                        <a class="nav-link" href="features.html"> Features </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <img src="assets/svg/setting.svg" alt="icons" />
+                        <a class="nav-link" href="setting.html"> Settings </a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="assets/svg/demo.svg" alt="icons" />
+                        <a class="nav-link" href="demo.html"> Demo </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- sidebar end -->
+
+            <div class="content" id="content">
+                <!-- top header start -->
+                <header class="topbar">
+                    <div class="navbar-section">
+                        <div class="nav-item d-flex">
+                            <img src="assets/svg/features.svg" alt="icons" />
+                            <a class="nav-link active" href="features.html"> features </a>
+                        </div>
+                        <div class="">
+                            <label class="sr-only" for="inlineFormInputGroup">Search</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <div class="input-group-text">
+                                        <i class="fa-solid fa-search"></i>
+                                    </div>
+                                </div>
+                                <input type="text" class="form-control bg" id="inlineFormInputGroup"
+                                    placeholder="search" />
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center" style="gap: 20px;">
+                            <button
+                                class="fa-solid fa-plus px-2 py-2 rounded-circle bg-primary primary-bg text-white menu-button"
+                                id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            </button>
+                            <div class="menu-dropdown dropdown-menu dropdown-menu-right">
+                                <p><i class="textdark fa-solid fa-file mr-2"></i>Bulk Report</p>
+                                <hr class="bg w-full">
+                                <div class="menu-column">
+                                    <div class="menu-item"><a href="#">+ Banking</a></div>
+                                    <div class="menu-item"><a href="#">+ Sales Return</a></div>
+                                    <div class="menu-item"><a href="#">+ Purchase Return</a></div>
+                                    <div class="menu-item"><a href="#">+ Ledger</a></div>
+                                </div>
+                                <div class="menu-column">
+                                    <div class="menu-item"><a href="#">+ Sales</a></div>
+                                    <div class="menu-item"><a href="#">+ Purchase</a></div>
+                                    <div class="menu-item"><a href="#">+ Journal</a></div>
+                                    <div class="menu-item"><a href="#">+ Item</a></div>
+                                </div>
+                                <div class="menu-column">
+                                    <div class="menu-item"><a href="#">+ Sales</a></div>
+                                    <div class="menu-item"><a href="#">+ Payment</a></div>
+                                    <div class="menu-item"><a href="#">+ Contra</a></div>
+                                    <div class="menu-item"><a href="#">+ Digital doc locker</a></div>
+                                </div>
+                            </div>
+
+                            <a href="#"><img src="assets/svg/setting.svg" class="bg-white rounded-circle px-1 py-1"
+                                    alt="icons" /></a>
+
+                            <a href="#"> <i
+                                    class="fa-regular text-dark fa-bell bg-white rounded-circle px-2 py-2"></i></a>
+                            |
+                            <div class="profile-section">
+                                <div class="dropdown">
+                                    <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle"
+                                        id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        <img src="assets/img/profile.jpg" alt="profile" height="25px" width="25px"
+                                            class="rounded-circle mr-2">
+                                        <span>Jenny</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-user-cog mr-2 text"></i>Manage
+                                            Account</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 text"></i>Change
+                                            Password</a>
+                                        <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 text"></i>Activity
+                                            Log</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i
+                                                class="fas fa-sign-out-alt mr-2 text"></i>Log
+                                            out</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- top header end -->
+
+                <!-- dashboard-content -->
+                <section>
+                    <h2>Features</h2>
+                </section>
+                <!-- dashboard-content -->
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+</body>
+
+</html>
