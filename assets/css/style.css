@@ -66,8 +66,7 @@
 }
 
 #nav {
-    gap: 20px;
-    padding: 10px 12px;
+    gap: 15px;
 }
 
 #nav .nav-item {
@@ -361,7 +360,7 @@
 
 }
 
-.nav-item {
+.wtx {
     width: 50%;
     text-align: center;
 }
