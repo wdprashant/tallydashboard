@@ -7,12 +7,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jqerry.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <link rel="stylesheet" ef="https://cdnjs.cloudflare.com/ajax/libs/font-aw  <link rel=" stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+<style></style>
 
 <body>
     <div class="full-container">
@@ -25,41 +26,39 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link active" href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
                         <a class="nav-link" href="accountig.html"> Accounting </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="drop">
                         <img src="assets/svg/sales.svg" alt="icons" />
-                        <a class="nav-link" href="sales.html"> Sales </a>
-                    </li>
-                    <li class="nav-item">
-                        <img src="assets/svg/purchage.svg" alt="icons" />
-                        <a class="nav-link" href="purchase.html">
-                            Purchase
+                        <a class="nav-link" href="#">
+                            Sales<i class="fa-solid ml-3 fa-chevron-down" style="font-size: 14px"></i>
                         </a>
+                        <ul class="drop" id="drop2">
+                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <img src="assets/svg/master.svg" alt="icons" />
-                        <a class="nav-link" href="master.html"> Master </a>
-                    </li>
-
                     <li class="nav-item">
                         <img src="assets/svg/gst-return.svg" alt="icons" />
-                        <a class="nav-link" href="Gst_return.html"> GST Return </a>
+                        <a class="nav-link" href="Tax-return.html"> Tax Return </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/document.svg" alt="icons" />
                         <a class="nav-link" href="document.html"> Document </a>
                     </li>
-
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
-                        <a class="nav-link" href="features.html"> Features </a>
+                        <a class="nav-link" href="Reports.html"> Reports </a>
                     </li>
-
+                    <li class="nav-item">
+                        <img src="assets/svg/purchage.svg" alt="icons" />
+                        <a class="nav-link" href="Applyforlone.html">Apply for Lone </a>
+                    </li>
                     <li class="nav-item">
                         <img src="assets/svg/setting.svg" alt="icons" />
                         <a class="nav-link" href="setting.html"> Settings </a>
@@ -71,7 +70,6 @@
                 </ul>
             </nav>
             <!-- sidebar end -->
-
             <div class="content" id="content">
                 <!-- top header start -->
                 <header class="topbar">
@@ -80,31 +78,34 @@
                             <img src="assets/svg/dashboard.svg" alt="icons" />
                             <a class="nav-link active" href="#"> Dashboard </a>
                         </div>
-                        <div class="">
-                            <label class="sr-only" for="inlineFormInputGroup">Search</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fa-solid fa-search"></i>
+                        <form action="">
+                            <div class="d-flex" style="gap: 10px">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-search"></i>
+                                        </div>
                                     </div>
+                                    <input type="text" class="form-control bg" id="inlineFormInputGroup"
+                                        placeholder="search" />
                                 </div>
-                                <input type="text" class="form-control bg" id="inlineFormInputGroup"
-                                    placeholder="search" />
+                                <input type="submit" class="px-4 rounded-lg search-btn" value="Search" />
                             </div>
-                        </div>
-
-                        <div class="d-flex align-items-center" style="gap: 20px;">
-                            <button
-                                class="fa-solid fa-plus px-2 py-2 rounded-circle bg-primary primary-bg text-white menu-button"
-                                id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            </button>
+                        </form>
+                        <div class="d-flex align-items-center" style="gap: 20px">
+                            <button class="fa-solid fa-plus px-2 py-2 menu-button" id="profileDropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                             <div class="menu-dropdown dropdown-menu dropdown-menu-right">
-                                <p><i class="textdark fa-solid fa-file mr-2"></i>Bulk Report</p>
-                                <hr class="bg w-full">
+                                <p>
+                                    <i class="textdark fa-solid fa-file mr-2"></i>Bulk Report
+                                </p>
+                                <hr class="bg w-full" />
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Banking</a></div>
                                     <div class="menu-item"><a href="#">+ Sales Return</a></div>
-                                    <div class="menu-item"><a href="#">+ Purchase Return</a></div>
+                                    <div class="menu-item">
+                                        <a href="#">+ Purchase Return</a>
+                                    </div>
                                     <div class="menu-item"><a href="#">+ Ledger</a></div>
                                 </div>
                                 <div class="menu-column">
@@ -113,19 +114,62 @@
                                     <div class="menu-item"><a href="#">+ Journal</a></div>
                                     <div class="menu-item"><a href="#">+ Item</a></div>
                                 </div>
+                                <!-- <hr style="height: 100%;"> -->
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Sales</a></div>
                                     <div class="menu-item"><a href="#">+ Payment</a></div>
                                     <div class="menu-item"><a href="#">+ Contra</a></div>
-                                    <div class="menu-item"><a href="#">+ Digital doc locker</a></div>
+                                    <div class="menu-item">
+                                        <a href="#">+ Digital doc locker</a>
+                                    </div>
+                                </div>
+                                <div class="menu-column">
+                                    <div class="menu-item"><a href="#">+ Purchase</a></div>
+                                    <div class="menu-item"><a href="#">+ Receipt</a></div>
                                 </div>
                             </div>
-
-                            <a href="#"><img src="assets/svg/setting.svg" class="bg-white rounded-circle px-1 py-1"
-                                    alt="icons" /></a>
-
-                            <a href="#"> <i
-                                    class="fa-regular text-dark fa-bell bg-white rounded-circle px-2 py-2"></i></a>
+                            <div>
+                                <a href="setting.html"><img src="assets/svg/setting.svg"
+                                        class="bg-white rounded-circle px-1 py-1" alt="icons" /></a>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-links" href="#" id="notificationDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-bell text-dark bg-white rounded-circle p-2"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+                                    <a class="dropdown-item stx" href="setting.html">
+                                        <i class="fa fa-cog"></i>
+                                        <div>
+                                            <span>Settings</span>
+                                            <p>Update Dashboard</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <div>
+                                            <span>Event Update</span>
+                                            <p>An event date update again</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-user"></i>
+                                        <div>
+                                            <span>Profile</span>
+                                            <p>Update your profile</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-exclamation-circle"></i>
+                                        <div>
+                                            <span>Application Error</span>
+                                            <p>Check running application</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-center" href="#">See all notifications</a>
+                                </div>
+                            </div>
                             |
                             <div class="profile-section">
                                 <div class="dropdown">
@@ -133,20 +177,18 @@
                                         id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="assets/img/profile.jpg" alt="profile" height="25px" width="25px"
-                                            class="rounded-circle mr-2">
+                                            class="rounded-circle mr-2" />
                                         <span>Jenny</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-user-cog mr-2 text"></i>Manage
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog mr-2 ixt"></i>Manage
                                             Account</a>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 text"></i>Change
+                                        <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 ixt"></i>Change
                                             Password</a>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 text"></i>Activity
+                                        <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 ixt"></i>Activity
                                             Log</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-sign-out-alt mr-2 text"></i>Log
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt ixt"></i>Log
                                             out</a>
                                     </div>
                                 </div>
@@ -155,27 +197,430 @@
                     </div>
                 </header>
                 <!-- top header end -->
-
                 <!-- dashboard-content -->
                 <section>
-                    <div class="container py-2">
+                    <div class="container-fluid py-2">
                         <div class="row">
-                            <div class="col-md-6 col-lg-6 mx-auto"><img src="assets/img/1st image.png" class="img-fluid"
-                                    alt=""></div>
-                            <div class="col-md-6 col-lg-6 mx-auto"><img src="assets/img/2nd image.png" class="img-fluid"
-                                    alt=""></div>
-                            <div class="col-md-12 col-lg-12 mx-auto"><img src="assets/img/3rd image.png"
-                                    class="img-fluid" alt=""></div>
+                            <div class="col-md-12 my-2 col-lg-6 mx-auto">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Account Receivable</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-3 py-3">
+                                        <p class="year">Total Unpaid Invoices ₹ 372,580.05</p>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue progress-bar-animate" role="progressbar"
+                                                style="width: 0%" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <hr style="width: 100%" />
+                                    <div>
+                                        <div class="row px-5">
+                                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                                <p class="CURRENT text-center">CURRENT</p>
+                                                <h5 class="heading text-center">₹ 0.00</h5>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                                <p class="OVERDUE text-center">OVERDUE</p>
+                                                <h5 class="heading text-center">₹ 372,580. 05</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <br />
+                            <!-- chart-2 -->
+                            <div class="col-md-12 my-2 col-lg-6 mx-auto">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Account Payables</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-3 py-3">
+                                        <p class="year">Total Unpaid Invoices ₹ 372,580.05</p>
+                                        <div class="progress">
+                                            <div class="progress-bar bg-blue progress-bar-animated" role="progressbar"
+                                                style="width: 0%" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <hr style="width: 100%" />
+                                    <div>
+                                        <div class="row px-5">
+                                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                                <p class="CURRENT text-center">CURRENT</p>
+                                                <h5 class="heading text-center">₹ 5,836.79</h5>
+                                            </div>
+                                            <div class="col-lg-6 col-sm-6 col-md-6">
+                                                <p class="OVERDUE text-center">OVERDUE</p>
+                                                <h5 class="heading text-center">₹ 244,012.67</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- chart-3 -->
+                            <div class="col-md-12 mt-4 col-lg-12 mx-auto">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Cash flow</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white px-3 py-3">
+                                        <div class="row">
+                                            <div class="col-lg-8">
+                                                <div class="chart-section d-flex pt-5 justify-content-center">
+                                                    <h1>Cash Flow Chart</h1>
+                                                </div>
+                                            </div>
+                                            <hr style="background: red; width: 0.2px; height: auto" />
+                                            <div class="col-lg-3 text-right">
+                                                <p class="OVERDUE text-right" style="font-size: 16px">
+                                                    Cash as on 01/01/2024
+                                                </p>
+                                                <h5 class="heading">₹ 13,56,598.65</h5>
+                                                <br />
+                                                <p class="Incoming" style="font-size: 16px">
+                                                    Incoming
+                                                </p>
+                                                <h5 class="heading">₹ 2,32,53,901.42 +</h5>
+                                                <br />
+                                                <p class="OVERDUE text-right" style="font-size: 16px">
+                                                    Outgoing
+                                                </p>
+                                                <h5 class="heading">₹ 2,32,53,901.42 -</h5>
+                                                <br />
+                                                <p class="text-primary text-right" style="font-size: 16px">
+                                                    Cash as on 31/12/2024
+                                                </p>
+                                                <h5 class="heading">₹2,16,39,276.31 =</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Sales & Purchase</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white chart-body px-5">
+                                        <h2 class="text-center">sales and purchase chart</h2>
+                                        <!-- sales and purchase chart heare -->
+                                        <hr style="width: 100%" class="my-2" />
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-4 col-sm-4 py-3">
+                                                <div class="d-flex align-items-center" style="gap: 20px">
+                                                    <div class="indicator"></div>
+                                                    <span>Income</span>
+                                                </div>
+                                                <div class="d-flex align-items-center" style="gap: 20px">
+                                                    <div class="red-indicator"></div>
+                                                    <span>Expenses</span>
+                                                </div>
+                                            </div>
+                                            <hr style="
+                                       background: rgba(0, 0, 0, 0.2);
+                                       width: 0.2px;
+                                       height: auto;
+                                       " />
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <p class="Incoming text-center">Total Income</p>
+                                                <h5 class="heading text-center">₹ 7,790,083.99</h5>
+                                            </div>
+                                            <div class="col-lg-4 col-md-4 col-sm-4">
+                                                <p class="OVERDUE text-center">Total Expenses</p>
+                                                <h5 class="heading text-center">₹ 2,166,598.51</h5>
+                                            </div>
+                                            <p class="">
+                                                * Income and expense values displayed are exclusive of
+                                                taxes.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Top Expenses</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-body px-2 py-3">
+                                        <div class="row">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <h1>Pi chart</h1>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <span style="color: rgba(53, 189, 122, 1)">●</span>
+                                                Automobile Expense (44.62%)<br />
+                                                <br />
+                                                <span style="color: rgba(248, 97, 43, 1)">●</span> IT
+                                                and Internet Expenses (18.66%)<br />
+                                                <br />
+                                                <span style="color: rgba(44, 143, 246, 1)">●</span>
+                                                Cost of Goods Sold (12.78%)<br />
+                                                <br />
+                                                <span style="color: rgba(255, 184, 48, 1)">●</span>
+                                                Consultant Expense (9.76%)<br />
+                                                <br />
+                                                <span style="color: rgba(135, 53, 220, 1)">●</span>
+                                                Office Supplies (5.79%)<br />
+                                                <br />
+                                                <span style="color: rgba(237, 48, 101, 1)">●</span>
+                                                Others (8.39%)<br />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12 my-2">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Receipt and Payment</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-white chart-body px-5">
+                                        <h2 class="text-center">sales and purchase chart</h2>
+                                        <!-- sales and purchase chart heare -->
+                                        <hr style="width: 100%" class="my-2" />
+                                        <div class="d-flex" style="gap: 20px">
+                                            <div class="d-flex align-items-center" style="gap: 20px">
+                                                <div class="indicator"></div>
+                                                <span>Receipt</span>
+                                            </div>
+                                            <div class="d-flex align-items-center" style="gap: 20px">
+                                                <div class="red-indicator"></div>
+                                                <span>Payment</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 my-2">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Income and Expenditure</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-body px-2 py-3">
+                                        <!-- income and ecpanditure -->
+                                        <h2 class="chart"> income and ecpanditure chart</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row my-3">
+                            <div class="col-lg-6 col-md-12 col-sm-12 my-2">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">Projects</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                       border-radius: 10px;
+                                       background-color: rgb(247, 247, 247);
+                                       ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-body">
+                                        <ul class="nav" id="pills-tab" role="tablist">
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" class="nav-link action active" id="pills-home-tab"
+                                                    data-toggle="pill" data-target="#pills-home" role="tab"
+                                                    aria-controls="pills-home" aria-selected="true">
+                                                    <h5>
+                                                        <span><i class="fa-regular fa-clock"></i> </span>12:00
+                                                    </h5>
+                                                    <h3 class="hours">UNBILLED HOURS</h3>
+                                                </button>
+                                            </li>
+                                            <li class="nav-item" role="presentation">
+                                                <button type="button" class="nav-link action" id="pills-profile-tab"
+                                                    data-toggle="pill" data-target="#pills-profile" role="tab"
+                                                    aria-controls="pills-profile" aria-selected="false">
+                                                    <h5>
+                                                        <span>
+                                                            <img src="assets/svg/tab-icon.svg" alt="" /> </span>₹100.00
+                                                        <h3 class="hours">UNBILLED EXPENSES</h3>
+                                                    </h5>
+                                                </button>
+                                            </li>
+                                        </ul>
+                                        <div class="tab-content" id="pills-tabContent">
+                                            <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                                                aria-labelledby="pills-home-tab">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">1</div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">1</div>
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="pills-profile" role="tabpanel"
+                                                aria-labelledby="pills-profile-tab">
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">2</div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">2</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-12 col-sm-12 my-2">
+                                <div class="chart-box">
+                                    <div class="chart-header py-2 px-5">
+                                        <h3 class="heading">GST Detail</h3>
+                                        <div class="dropdown">
+                                            <p class="dropdown-chart-year p-0 m-0 dropdown-toggle"
+                                                data-toggle="dropdown" aria-expanded="false">
+                                                This Fiscal Year
+                                            </p>
+                                            <div class="dropdown-menu p-0 m-0" style="
+                                          border-radius: 10px;
+                                          background-color: rgb(247, 247, 247);
+                                          ">
+                                                <a class="dropdown-item year" href="#">The Fiscal Year</a>
+                                                <a class="dropdown-item year" href="#">Priveous fiscal year</a>
+                                                <a class="dropdown-item year" href="#">last 12 months</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="chart-body px-3 py-3 bg-white">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Bank Account</h6>
+                                            <p class="text-primary">₹2,16,39,276.31</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Cash Account</h6>
+                                            <p class="text-primary">₹2,16,39,276.31</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Credit card Account</h6>
+                                            <p class="text-primary">₹2,16,39,276.31</p>
+                                        </div>
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Payment Clearing Account </h6>
+                                            <p class="text-primary">₹2,16,39,276.31</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
                 <!-- dashboard-content -->
-
-
             </div>
-
-
-
         </div>
     </div>
 </body>

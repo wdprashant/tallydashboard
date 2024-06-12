@@ -7,11 +7,10 @@
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/jqerry.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/script.js"></script>
-    <link rel="stylesheet" ef="https://cdnjs.cloudflare.com/ajax/libs/font-aw  <link rel=" stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
 <body>
@@ -31,24 +30,20 @@
                         <img src="assets/svg/accounting.svg" alt="icons" />
                         <a class="nav-link" href="accountig.html"> Accounting </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item" id="drop">
                         <img src="assets/svg/sales.svg" alt="icons" />
-                        <a class="nav-link" href="sales.html"> Sales </a>
-                    </li>
-                    <li class="nav-item">
-                        <img src="assets/svg/purchage.svg" alt="icons" />
-                        <a class="nav-link" href="purchase.html">
-                            Purchase
+                        <a class="nav-link" href="#">
+                            Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
+                        <ul class="drop" id="drop2">
+                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        </ul>
                     </li>
-                    <li class="nav-item">
-                        <img src="assets/svg/master.svg" alt="icons" />
-                        <a class="nav-link" href="master.html"> Master </a>
-                    </li>
-
                     <li class="nav-item">
                         <img src="assets/svg/gst-return.svg" alt="icons" />
-                        <a class="nav-link" href="Gst_return.html"> GST Return </a>
+                        <a class="nav-link" href="Tax-return.html"> Tax Return </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/document.svg" alt="icons" />
@@ -57,9 +52,12 @@
 
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
-                        <a class="nav-link" href="features.html"> Features </a>
+                        <a class="nav-link" href="Reports.html"> Reports </a>
                     </li>
-
+                    <li class="nav-item">
+                        <img src="assets/svg/purchage.svg" alt="icons" />
+                        <a class="nav-link" href="Applyforlone.html">Apply for Lone </a>
+                    </li>
                     <li class="nav-item">
                         <img src="assets/svg/setting.svg" alt="icons" />
                         <a class="nav-link" href="setting.html"> Settings </a>
@@ -77,26 +75,26 @@
                 <header class="topbar">
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
-                            <img src="assets/svg/gst-return.svg" alt="icons" />
-                            <a class="nav-link active" href="Gst_return.html"> Gst Return </a>
+                            <img src="assets/svg/dashboard.svg" alt="icons" />
+                            <a class="nav-link active" href="#"> Dashboard </a>
                         </div>
-                        <div class="">
-                            <label class="sr-only" for="inlineFormInputGroup">Search</label>
-                            <div class="input-group">
-                                <div class="input-group-prepend">
-                                    <div class="input-group-text">
-                                        <i class="fa-solid fa-search"></i>
+                        <form action="">
+                            <div class="d-flex " style="gap: 10px;">
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <div class="input-group-text">
+                                            <i class="fa-solid fa-search"></i>
+                                        </div>
                                     </div>
+                                    <input type="text" class="form-control bg" id="inlineFormInputGroup"
+                                        placeholder="search" />
                                 </div>
-                                <input type="text" class="form-control bg" id="inlineFormInputGroup"
-                                    placeholder="search" />
+                                <input type="submit" class="px-4 rounded-lg search-btn" value="Search">
                             </div>
-                        </div>
-
+                        </form>
                         <div class="d-flex align-items-center" style="gap: 20px;">
-                            <button
-                                class="fa-solid fa-plus px-2 py-2 rounded-circle bg-primary primary-bg text-white menu-button"
-                                id="profileDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button class="fa-solid fa-plus px-2 py-2 menu-button" id="profileDropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             </button>
                             <div class="menu-dropdown dropdown-menu dropdown-menu-right">
                                 <p><i class="textdark fa-solid fa-file mr-2"></i>Bulk Report</p>
@@ -113,19 +111,62 @@
                                     <div class="menu-item"><a href="#">+ Journal</a></div>
                                     <div class="menu-item"><a href="#">+ Item</a></div>
                                 </div>
+                                <!-- <hr style="height: 100%;"> -->
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Sales</a></div>
                                     <div class="menu-item"><a href="#">+ Payment</a></div>
                                     <div class="menu-item"><a href="#">+ Contra</a></div>
                                     <div class="menu-item"><a href="#">+ Digital doc locker</a></div>
                                 </div>
+                                <div class="menu-column">
+                                    <div class="menu-item"><a href="#">+ Purchase</a></div>
+                                    <div class="menu-item"><a href="#">+ Receipt</a></div>
+
+                                </div>
+                            </div>
+                            <div>
+                                <a href="setting.html"><img src="assets/svg/setting.svg"
+                                        class="bg-white rounded-circle px-1 py-1" alt="icons" /></a>
+                            </div>
+                            <div class="dropdown">
+                                <a class="nav-links" href="#" id="notificationDropdown" role="button"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <i class="fas fa-bell text-dark bg-white rounded-circle p-2"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="notificationDropdown">
+                                    <a class="dropdown-item stx" href="setting.html">
+                                        <i class="fa fa-cog"></i>
+                                        <div>
+                                            <span>Settings</span>
+                                            <p>Update Dashboard</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-calendar-alt"></i>
+                                        <div>
+                                            <span>Event Update</span>
+                                            <p>An event date update again</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-user"></i>
+                                        <div>
+                                            <span>Profile</span>
+                                            <p>Update your profile</p>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item stx" href="#">
+                                        <i class="fa fa-exclamation-circle"></i>
+                                        <div>
+                                            <span>Application Error</span>
+                                            <p>Check running application</p>
+                                        </div>
+                                    </a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item text-center" href="#">See all notifications</a>
+                                </div>
                             </div>
 
-                            <a href="#"><img src="assets/svg/setting.svg" class="bg-white rounded-circle px-1 py-1"
-                                    alt="icons" /></a>
-
-                            <a href="#"> <i
-                                    class="fa-regular text-dark fa-bell bg-white rounded-circle px-2 py-2"></i></a>
                             |
                             <div class="profile-section">
                                 <div class="dropdown">
@@ -138,15 +179,15 @@
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
                                         <a class="dropdown-item" href="#"><i
-                                                class="fas fa-user-cog mr-2 text"></i>Manage
+                                                class="fas fa-user-cog mr-2 ixt"></i>Manage
                                             Account</a>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 text"></i>Change
+                                        <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 ixt"></i>Change
                                             Password</a>
-                                        <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 text"></i>Activity
+                                        <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 ixt"></i>Activity
                                             Log</a>
                                         <div class="dropdown-divider"></div>
                                         <a class="dropdown-item" href="#"><i
-                                                class="fas fa-sign-out-alt mr-2 text"></i>Log
+                                                class="fas fa-sign-out-alt ixt"></i>Log
                                             out</a>
                                     </div>
                                 </div>
@@ -158,7 +199,7 @@
 
                 <!-- dashboard-content -->
                 <section>
-                    <h2>Gst return</h2>
+                   <h2>document</h2>
                 </section>
                 <!-- dashboard-content -->
 
