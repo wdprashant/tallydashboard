@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: inter;
 }
 
 :root {
@@ -428,7 +429,511 @@
 
 
 
-/* progress bar */
 
- 
-/* progress bar */
+
+
+/* index page end  */
+
+
+
+
+/* accounting page start  */
+
+.submit-section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 0px;
+    justify-content: center;
+    transition: all ease-out 2s;
+}
+
+
+.accounting-heading {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 33.54px;
+    letter-spacing: -0.2580094039440155px;
+    text-align: center;
+    color: var(--primary-color);
+
+}
+
+.submit-section p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.8px;
+    text-align: center;
+    color: black;
+}
+
+#submit-btn {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+#back-btn {
+    color: white;
+    background-color: var(--primary-color);
+}
+
+#filter {
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    padding: 2px 14px;
+}
+
+#filter:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.file-upload-wrapper {
+    border: 2px dashed #6c63ff;
+    border-radius: 5px;
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.file-upload-wrapper:hover {
+    background-color: white;
+}
+
+.file-upload-icon {
+    font-size: 40px;
+    color: #1640C1;
+}
+
+.file-upload-title {
+    font-family: Inter;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 32.18px;
+    color: black;
+}
+
+.file-upload-text {
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 32.18px;
+    text-align: center;
+    color: rgba(109, 109, 109, 1);
+}
+
+.file-upload-browse {
+    margin-top: 10px;
+}
+
+#browse-files-btn {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    font-family: Inter;
+    font-size: 19.31px;
+    font-weight: 600;
+    line-height: 28.96px;
+    text-align: left;
+}
+
+#browse-files-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+.upload-data {
+    background-color: white;
+
+    border: 2px dashed #6c63ff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+.upload-data h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.upload-data .row {
+    align-items: center;
+}
+
+.upload-data .file-icon {
+    width: 100px;
+    height: 100px;
+    background-color: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 24px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.upload-data .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+#second-upload-btn {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+#upload-document {
+    background-color: white;
+    border: 2px dashed #6c63ff;
+    border-radius: 5px;
+    padding: 20px;
+    position: relative;
+}
+
+
+#upload-document .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: none;
+    border: none;
+}
+
+#upload-document-btn {
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+
+
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.pagination-controls #prev-page {
+    padding: 6px 20px;
+    font-weight: 600;
+    font-size: 25px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.pagination-controls #next-page {
+    font-size: 25px;
+    font-weight: 600;
+    padding: 6px 20px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.upload-progress {
+    width: 100%;
+    margin: 20px 0;
+}
+
+.progress {
+    background-color: #f3f3f3;
+    border-radius: 4px;
+    height: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 0.4s;
+}
+
+.bg-info {
+    background-color: #17a2b8;
+}
+
+.verify-btn {
+    display: block;
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.verify-btn:disabled {
+    background-color: #6c757d;
+}
+
+.success-message {
+    background-color: #9cf3ca;
+    display: none;
+    color: green;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+
+
+.uploaded-files .table thead {
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 18px;
+    text-align: left;
+    border: none;
+}
+
+
+.status-completed {
+    color: green;
+    background-color: #c5e4cc;
+    padding: 1px 5px;
+    border-radius: 20px;
+    font-family: inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.uploaded-files .table tr:hover {
+    background-color: rgba(235, 242, 250, 1);
+    border-radius: 10px;
+    transition: all ease 2s;
+    cursor: pointer;
+}
+
+.table-tr-bg {
+    background-color: rgba(235, 242, 250, 1);
+}
+
+
+.quick-actions i {
+    cursor: pointer;
+    margin: 0 0.5em;
+}
+
+.table tr {
+    border-radius: 20px;
+    border: none;
+    margin-top: 10px;
+}
+
+.table td {
+    border: none !important;
+
+}
+
+table .fa {
+    margin: 0px 10px;
+}
+
+#check-files {
+    margin: 0px 3px;
+}
+
+
+
+
+/* accounting page end */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* tax-return page start */
+
+
+/* tax-return page end */
+
+
+
+
+/* apply for lone */
+#apply-for-lone .title {
+    font-family: Inter;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: left;
+    color: var(--primary-color);
+}
+
+#apply-for-lone .para {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25.8px;
+    text-align: left;
+}
+
+.icon-img {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 10px;
+}
+
+.lone-content h6 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    text-align: center;
+
+}
+
+.lone-content p {
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: center;
+
+}
+
+#apply-for-lone .apply-btn {
+    background-color: var(--primary-color);
+    color: white;
+    display: block;
+    margin: 0 auto;
+}
+
+.otp-section #get-otp {
+    background-color: var(--primary-color);
+    color: white;
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 21.78px;
+    text-align: center;
+
+}
+
+.otp-section {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 400px;
+    /* Adjust as needed */
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+    /* Ensure it appears above other elements */
+}
+
+.otp-section .form-control {
+    border: 2px solid rgba(206, 206, 206, 1) !important;
+}
+
+.otp-section .otp-btn {
+    display: block;
+    margin: 10px auto;
+    background-color: var(--primary-color);
+
+}
+
+/* apply for lone */
+
+
+
+/* demo title */
+.demo .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo-container {
+    background-image: url(../img/demovector.png);
+    background-position: cover;
+    background-position: center;
+}
+
+.demo-title {
+    font-family: inter;
+    text-align: center;
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 600;
+}
+
+.demo-title span {
+    color: var(--primary-color);
+}
+
+.demo .content p {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21.78px;
+    text-align: center;
+}
+
+.demo .content .watch-now {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.laptop-container {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+}
+
+.laptop-image {
+    /* display: block; */
+    width: 100%;
+}
+
+.laptop-video {
+    position: absolute;
+    top: 20%;
+    left: 21%;
+    width: 56.5%;
+    height: 54%;
+    border: 0;
+}
+
+/* demo title */
