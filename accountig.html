@@ -39,11 +39,11 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link  " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
-                        <a class="nav-link" href="accountig.html"> Accounting </a>
+                        <a class="nav-link active" href="accountig.html"> Accounting </a>
                     </li>
                     <li class="nav-item" id="drop">
                         <img src="assets/svg/sales.svg" alt="icons" />
@@ -62,7 +62,7 @@
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/document.svg" alt="icons" />
-                        <a class="nav-link" href="document.html"> Document </a>
+                        <a class="nav-link " href="document.html"> Document </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
@@ -239,7 +239,7 @@
                             <div class="col-md-8 mx-auto">
                                 <div class="file-upload-wrapper">
                                     <div class="file-upload-icon mb-3">
-                                        <img src="assets/img/brose_files.png" alt="">
+                                        <img src="assets/img/brose_files.png" alt="icons">
                                     </div>
                                     <div class="file-upload-title">Drag your file(s) to start uploading</div>
                                     <div class="file-upload-text">Only support .jpg, .png, .pdf, .svg and zip files
@@ -256,7 +256,7 @@
                                         <div class="col-lg-6 col-md-12 ">
                                             <p id="file-name">TallyFlow.pdf</p>
                                             <p id="file-size">1.8 MB</p>
-                                            <img src="assets/svg/pdf.svg" class="mx-auto d-block" alt="">
+                                            <img src="assets/svg/pdf.svg" class="mx-auto d-block" alt="icons">
                                         </div>
                                         <div class="col-lg-6 col-md-12">
                                             <p><strong>Document Details:</strong></p>
@@ -276,27 +276,36 @@
                                         <div class="col-lg-12 col-sm-12 col-md-12 ">
                                             <p id="file-name">TallyFlow.pdf</p>
                                             <p id="file-size">1.8 MB</p>
-                                            <img src="assets/svg/pdf.svg" class="d-block mx-auto" alt="">
+                                            <img src="assets/svg/pdf.svg" class="d-block mx-auto" alt="icons">
                                         </div>
                                         <hr>
                                         <div class="col-lg-12 col-sm-12 col-md-12 py-2">
                                             <div class="upload-progress bg py-3 px-3" id="file-upload-progress">
-                                                <div class="progress file-progress-bar">
-                                                    <div class="progress-bar bg-info" id="custom-progress-bar"
+                                                <div class="d-flex align-items-start">
+                                                    <img src="assets/svg/load_file.svg" alt="icons">
+                                                    <div>
+                                                        <p id="file-name">TallyFlow.pdf</p>
+                                                        <p id="file-size my-1">1.8 MB</p>
+                                                    </div>
+                                                </div>
+                                                <div class="progress bg-white file-progress-bar">
+                                                    <div class="progress-bar blue" id="custom-progress-bar"
                                                         role="progressbar" style="width: 0%;" aria-valuenow="0"
                                                         aria-valuemin="0" aria-valuemax="100">
                                                     </div>
                                                 </div>
                                                 <span id="custom-progress-text">0%</span>
                                             </div>
-                                            <div class="success-message py-2 rounded-lg" id="success-message">
-                                                <div class="d-flex justify-content-center">
-                                                    <img src="assets/svg/icon.svg" width="40px" class="mx-3" alt="">
+                                            <div class="success-message py-2 px-5 rounded-lg" id="success-message">
+                                                <div class="d-flex justify-content-center align-items-center">
+                                                    <img src="assets/svg/success.svg" width="100" class="mx-3 img-fluid"
+                                                        alt="icons">
                                                     <div>
-                                                        <h4 class="text-left">your file is uploaded successfully</h4>
-                                                        <h6 class="text-left">your file is uploaded successfully,Now you click to verify
+                                                        <h5 class="text-left">your file is uploaded successfully</h5>
+                                                        <p class="text-left ">your file is uploaded successfully,Now you
+                                                            click to verify
                                                             button
-                                                            to verify your uploaded document</h6>
+                                                            to verify your uploaded document</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -306,119 +315,111 @@
                                     </div>
                                 </div>
 
-                                <div id="verify-document" class="verify-document">
-                                   
+                                <div id="verify-document" class="verify-document" style="display: none;">
+                                    <button class="btn-close" id="close-verify-document">&times;</button>
+                                    <h2>Document Details</h2>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-sm-12 col-md-12 ">
+                                            <p id="file-name">TallyFlow.pdf</p>
+                                            <p id="file-size">1.8 MB</p>
+                                        </div>
+                                        <hr>
+                                        <h1 class="text-center">scan system</h1>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="container">
+                        <div class="container mt-3">
                             <div class="uploaded-files">
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <table class="table  rounded-lg" id="pdf-table" e>
-                                            <thead>
-                                                <tr style="background-color:rgba(235, 242, 250, 1);">
-                                                    <th scope="col">Document Name</th>
-                                                    <th scope="col">Document Type</th>
-                                                    <th scope="col">Document Date</th>
-                                                    <th scope="col">Status</th>
-                                                    <th scope="col">Quick Actions</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">PR_Sales_06072024</td>
-                                                    <td>.Pdf</td>
-                                                    <td>06/07/2024, 02:45</td>
-                                                    <td><span class="status-completed">Completed</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">MR_Invoice_06062024</td>
-                                                    <td>.Docx</td>
-                                                    <td>06/06/2024, 11:30</td>
-                                                    <td><span class="status-pending">Pending</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">HR_Report_05052024</td>
-                                                    <td>.Xlsx</td>
-                                                    <td>05/05/2024, 09:15</td>
-                                                    <td><span class="status-inprogress">In Progress</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">IT_Audit_04042024</td>
-                                                    <td>.Pdf</td>
-                                                    <td>04/04/2024, 14:00</td>
-                                                    <td><span class="status-completed">Completed</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">MK_Plan_03032024</td>
-                                                    <td>.Pdf</td>
-                                                    <td>03/03/2024, 16:45</td>
-                                                    <td><span class="status-pending">Pending</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">FN_Summary_02022024</td>
-                                                    <td>.Docx</td>
-                                                    <td>02/02/2024, 08:00</td>
-                                                    <td><span class="status-inprogress">In Progress</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <tr>
-                                                    <td><input type="checkbox" class="form-controle"
-                                                            id="check-files">SL_Report_01012024</td>
-                                                    <td>.Xlsx</td>
-                                                    <td>01/01/2024, 12:30</td>
-                                                    <td><span class="status-completed">Completed</span></td>
-                                                    <td class="quick-actions">
-                                                        <i class="fa fa-pencil-alt" title="Edit"></i>
-                                                        <i class="fa fa-print" title="Print"></i>
-                                                        <i class="fa fa-trash" title="Delete"></i>
-                                                    </td>
-                                                </tr>
-                                                <!-- Add more rows as needed -->
-                                            </tbody>
-                                        </table>
-                                        <div id="pagination-controls" class="pagination-controls">
-                                            <button id="prev-page" class="disabled">«</button>
-                                            <!-- Pagination buttons will be generated here -->
-                                            <button id="next-page">»</button>
-                                        </div>
+                                <div class="row  align-items-center">
+                                    <!-- table component -->
+                                    <div class="col-md-12 tables-head-system ">
+                                        <p class="head">Document Name</p>
+                                        <p class="head">Document Type</p>
+                                        <p class="head">Document Date</p>
+                                        <p class="head">Status</p>
+                                        <p class="head">Quick Actions</p>
                                     </div>
+                                    <!-- table component -->
+
+                                    <!-- render tables -->
+                                    <div class="col-md-12 tables-system ">
+                                        <p><input type="checkbox" class="form-controle mr-2"
+                                                id="check-files">PR_Sales_06072024</p>
+                                        <p>.Pdf</p>
+                                        <p>06/07/2024, 02:45</p>
+                                        <p><span class="status-completed">Completed</span></p>
+                                        <p class="quick-actions">
+                                            <i class="fa fa-pencil-alt mx-1"></i>
+                                            <i class="fa fa-print mx-1 "></i>
+                                            <i class="fa fa-trash mx-1 "></i>
+                                        </p>
+                                    </div>
+                                    <!-- render tables -->
+
+                                    <!-- render tables -->
+                                    <div class="col-md-12 tables-system ">
+                                        <p><input type="checkbox" class="form-controle mr-2"
+                                                id="check-files">PR_Sales_06072024</p>
+                                        <p>.Pdf</p>
+                                        <p>06/07/2024, 02:45</p>
+                                        <p><span class="status-completed">Completed</span></p>
+                                        <p class="quick-actions">
+                                            <i class="fa fa-pencil-alt mx-1"></i>
+                                            <i class="fa fa-print mx-1 "></i>
+                                            <i class="fa fa-trash mx-1 "></i>
+                                        </p>
+                                    </div>
+                                    <!-- render tables -->
+
+
+                                    <!-- render tables -->
+                                    <div class="col-md-12 tables-system ">
+                                        <p><input type="checkbox" class="form-controle mr-2"
+                                                id="check-files">PR_Sales_06072024</p>
+                                        <p>.Pdf</p>
+                                        <p>06/07/2024, 02:45</p>
+                                        <p><span class="status-completed">Completed</span></p>
+                                        <p class="quick-actions">
+                                            <i class="fa fa-pencil-alt mx-1"></i>
+                                            <i class="fa fa-print mx-1 "></i>
+                                            <i class="fa fa-trash mx-1 "></i>
+                                        </p>
+                                    </div>
+                                    <!-- render tables -->
+
+
+                                    <!-- render tables -->
+                                    <div class="col-md-12 tables-system ">
+                                        <p><input type="checkbox" class="form-controle mr-2"
+                                                id="check-files">PR_Sales_06072024</p>
+                                        <p>.Pdf</p>
+                                        <p>06/07/2024, 02:45</p>
+                                        <p><span class="status-completed">Completed</span></p>
+                                        <p class="quick-actions">
+                                            <i class="fa fa-pencil-alt mx-1"></i>
+                                            <i class="fa fa-print mx-1 "></i>
+                                            <i class="fa fa-trash mx-1 "></i>
+                                        </p>
+                                    </div>
+                                    <!-- render tables -->
+
+
+                                    <!-- render tables -->
+                                    <div class="col-md-12 tables-system ">
+                                        <p><input type="checkbox" class="form-controle mr-2"
+                                                id="check-files">PR_Sales_06072024</p>
+                                        <p>.Pdf</p>
+                                        <p>06/07/2024, 02:45</p>
+                                        <p><span class="status-completed">Completed</span></p>
+                                        <p class="quick-actions">
+                                            <i class="fa fa-pencil-alt mx-1"></i>
+                                            <i class="fa fa-print mx-1 "></i>
+                                            <i class="fa fa-trash mx-1 "></i>
+                                        </p>
+                                    </div>
+                                    <!-- render tables -->
                                 </div>
                             </div>
                         </div>

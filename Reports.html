@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 
-<body >
+<body>
     <div class="full-container">
         <div class="inner-section bg">
             <!-- sidebar  start-->
@@ -24,7 +24,7 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link  " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
@@ -52,7 +52,7 @@
 
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
-                        <a class="nav-link" href="Reports.html"> Reports </a>
+                        <a class="nav-link active" href="Reports.html"> Reports </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/purchage.svg" alt="icons" />
@@ -178,16 +178,14 @@
                                         <span>Jenny</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-user-cog mr-2 ixt"></i>Manage
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog mr-2 ixt"></i>Manage
                                             Account</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 ixt"></i>Change
                                             Password</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 ixt"></i>Activity
                                             Log</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-sign-out-alt ixt"></i>Log
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt ixt"></i>Log
                                             out</a>
                                     </div>
                                 </div>
@@ -197,11 +195,83 @@
                 </header>
                 <!-- top header end -->
 
-                <!-- dashboard-content -->
+                <!-- reports -content -->
                 <section>
-                   <h2>Report</h2>
+                    <div class="reposrts-content container-fluid px-3 py-2">
+                   <div class="row">
+                    <div class="col-md-6 col-md-6 col-sm-12">
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper"></i> Business Overview</h4>
+                            <div class="box-tb">Profit And Loss</div>
+                            <div class="box-tb">Cash Flow Statement</div>
+                            <div class="box-tb">Balance Sheet</div>
+                            <div class="box-tb">Trial Balance</div>
+                            <div class="movement-equity">
+                                <div class="box-tb">Movement Of Equity</div>
+                            </div>
+                            <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"></i><i
+                                    class="fa-solid fa-angle-down"></i>More Reports</button>
+                        </div>
+
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper"></i> Taxes</h4>
+                            <div class="box-tb">GST Reports</div>
+                            <div class="box-tb">TDS Reports</div>
+                        </div>
+                        
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper mx-2"></i>Payables</h4>
+                            <div class="box-tb">Vendor Balances</div>
+                            <div class="box-tb">Vendor Balances summary</div>
+                            <div class="box-tb">AP Aging Summary</div>
+                            <div class="box-tb">AP aging details</div>
+                            <div class="movement-equity">
+                                <div class="box-tb">Day Book</div>
+                            </div>
+                            <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"></i><i
+                                    class="fa-solid fa-angle-down"></i>More Reports</button>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-md-6 col-sm-12">
+
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper mx-2"></i>Sales</h4>
+                            <div class="box-tb">Sales by Customer</div>
+                            <div class="box-tb">Sales by item</div>
+                        </div>
+
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper mx-2"></i>Receivables</h4>
+                            <div class="box-tb">Customer Balances</div>
+                            <div class="box-tb">AR aging summary</div>
+                            <div class="box-tb">AR Aging Details</div>
+                            <div class="box-tb">Customer balance summary</div>
+                            <div class="movement-equity">
+                                <div class="box-tb">Receivable Summary</div>
+                                <div class="box-tb">Receivable details</div>
+                            </div>
+                            <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"></i><i
+                                    class="fa-solid fa-angle-down"></i>More Reports</button>
+                        </div>
+
+                        <div class="box">
+                            <h4><i class="fa-regular fa-newspaper mx-2"></i>Banking</h4>
+                            <div class="box-tb">Total receive</div>
+                            <div class="box-tb">Total Payment</div>
+                            <div class="box-tb">balance as per book</div>
+                            <div class="box-tb">ACurrency</div>
+                            <div class="movement-equity">
+                                <div class="box-tb">Reconciliation status</div>
+                            </div>
+                            <button class="d-block ml-auto toggle-button" onclick="toggleReports(this)"></i><i
+                                    class="fa-solid fa-angle-down"></i>More Reports</button>
+                        </div>
+                    </div>
+                    </div>
+                   </div>
+                    </div>
                 </section>
-                <!-- dashboard-content -->
+                <!-- reports -content -->
 
 
             </div>

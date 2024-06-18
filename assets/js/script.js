@@ -100,20 +100,26 @@ $(document).ready(function () {
         $('#upload-document').hide();
         $('#upload-data').show();
     });
+
+    $('#close-verify-document').click(function () {
+        $('#verify-document').hide();
+        $('#upload-data').show();
+    });
 });
 
 $(document).ready(function () {
     $('input[type="checkbox"]').on('change', function () {
         if ($(this).is(':checked')) {
-            $(this).closest('tr').addClass('table-tr-bg');
+            $(this).closest('.tables-system').addClass('bg-white');
         } else {
-            $(this).closest('tr').removeClass('table-tr-bg');
+            $(this).closest('.tables-system').removeClass('bg-white');
         }
-    }); 
+    });
 });
 
+
 $(document).ready(function () {
-    const rowsPerPage = 4; 
+    const rowsPerPage = 4;
     const $table = $('#pdf-table tbody');
     const $paginationControls = $('#pagination-controls');
     const $prevPageButton = $('#prev-page');
@@ -164,25 +170,57 @@ $(document).ready(function () {
         if (progress >= 100) {
             clearInterval(interval);
             $('#file-upload-progress').hide();
-            $('#success-message').show();
+            $('#success-message').fadeIn();
         } else {
             progress += 10;
             updateCustomProgressBar(progress);
         }
     }, 1000);
 });
-
-  
-
-    
+$(document).ready(function () {
+    $('#verify-btn').click(function () {
+        $('#upload-document').fadeOut('slow', function () {
+            $('#verify-document').fadeIn('slow');
+        });
+    });
+});
 
 // accounting page
 
 
 
+
+// documents page
+$(document).ready(function () {
+    $('.toggle-button').click(function () {
+        var movementEquity = $(this).siblings('.movement-equity');
+        var icon = $(this).find('i');
+        var buttonText = $(this).contents().filter(function () {
+            return this.nodeType === 3;
+        })[0];
+
+        movementEquity.slideToggle('slow', function () {
+            if (movementEquity.is(':visible')) {
+                icon.removeClass('fa-angle-down').addClass('fa-angle-up');
+                buttonText.nodeValue = ' Less Reports';
+            } else {
+                icon.removeClass('fa-angle-up').addClass('fa-angle-down');
+                buttonText.nodeValue = ' More Reports';
+            }
+        });
+    });
+
+    $('.box-tb').click(function () {
+        $(this).toggleClass('selected');
+    });
+});
+
+// documents page
+
+
 // apply-for-lone-page
-$(document).ready(function() {
-    $('#apply-btn').click(function() {
+$(document).ready(function () {
+    $('#apply-btn').click(function () {
         $('#lone-content').hide();
         $('#otp-section').fadeIn();
     });
