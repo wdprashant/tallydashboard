@@ -227,3 +227,89 @@ $(document).ready(function () {
 });
 // apply-for-lone-page
 
+
+
+
+$(document).ready(function () {
+    let currentStep = 0;
+    const steps = $('.step');
+    const progressSteps = $('.progress-step');
+    const progressText = $('#progressText');
+    const formData = {};
+
+    function showStep(step) {
+        steps.eq(currentStep).fadeOut(400, function () {
+            steps.removeClass('active').eq(step).fadeIn(400).addClass('active');
+        });
+        progressSteps.removeClass('active').slice(0, step + 1).addClass('active');
+        progressText.text(`${step + 1} of ${steps.length}`);
+    }
+
+    function saveFormData() {
+        $('#multiStepForm')
+            .find('input, select, textarea')
+            .each(function () {
+                formData[this.id] = $(this).val();
+            });
+    }
+
+    function loadFormData() {
+        $.each(formData, function (key, value) {
+            $(`#${key}`).val(value);
+        });
+    }
+
+    $('.next-step').click(function () {
+        if (currentStep < steps.length - 1) {
+            saveFormData();
+            const nextStep = currentStep + 1;
+            steps.eq(currentStep).fadeOut(400, function () {
+                currentStep = nextStep;
+                showStep(currentStep);
+            });
+        }
+    });
+
+    progressSteps.click(function () {
+        const step = $(this).data('step');
+        if (step < currentStep) {
+            steps.eq(currentStep).fadeOut(400, function () {
+                currentStep = step;
+                showStep(currentStep);
+            });
+        }
+    });
+
+    $('#multiStepForm').submit(function (event) {
+        event.preventDefault();
+        saveFormData();
+        console.log(formData); // Here you can handle the form data as needed
+    });
+
+    loadFormData();
+    showStep(currentStep);
+});
+
+
+
+$(document).ready(function () {
+    $('.custom-select-option').on('click', function () {
+        const dropdown = $(this).next('.custom-dropdown');
+        $('.custom-dropdown').not(dropdown).hide(); // Hide all other dropdowns
+        dropdown.toggle();
+    });
+
+    $('.custom-dropdown').on('click', 'div', function () {
+        const value = $(this).data('value');
+        $(this).parent().prev('.custom-select-option').text(value);
+        $(this).parent().hide();
+    });
+
+    $(document).on('click', function (e) {
+        if (!$(e.target).closest('.custom-select-container').length) {
+            $('.custom-dropdown').hide();
+        }
+    });
+});
+
+
