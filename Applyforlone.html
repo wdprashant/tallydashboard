@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -24,7 +25,7 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
@@ -35,10 +36,10 @@
                         <a class="nav-link" href="#">
                             Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
-                        <ul class="drop" id="drop2">
-                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
-                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
-                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item nav-link" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item nav-link" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item nav-link" href="Sales-order.html">Sales Order</a>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -76,7 +77,7 @@
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
                             <img src="assets/svg/dashboard.svg" alt="icons" />
-                            <a class="nav-link active" href="#"> Apply for lone </a>
+                            <a class="nav-link active" href="#" id="title-link"> Apply for lone </a>
                         </div>
                         <form action="">
                             <div class="d-flex " style="gap: 10px;">
@@ -196,7 +197,7 @@
                 <!-- top header end -->
 
                 <!-- aplly for lone-content -->
-                <section class="apply-for-lone mt-2" id="apply-for-lone" >
+                <section class="apply-for-lone mt-2" id="apply-for-lone">
                     <div class="container-fluid">
                         <div id="lone-content">
                             <h2 class="title my-3">Business Loan</h2>
@@ -208,7 +209,7 @@
                             <hr>
                             <div class="row lone-content  justify-content-around px-2">
                                 <div
-                                    class="col-lg-3  py-3 d-flex flex-column justify-content-center align-items-center bg-white">
+                                    class="col-lg-3 my-2 py-3 d-flex flex-column justify-content-center align-items-center bg-white">
                                     <img src="assets/svg/dollor.svg" class="rounded-lg  icon-img" alt="icons">
                                     <br>
                                     <h6>Unsecured loans up to ₹10lac</h6>
@@ -217,7 +218,7 @@
                                         at annual rate of 11.75%. </p>
                                 </div>
                                 <div
-                                    class="col-lg-3  py-3 d-flex flex-column justify-content-center align-items-center bg-white">
+                                    class="col-lg-3 my-2 py-3 d-flex flex-column justify-content-center align-items-center bg-white">
                                     <img src="assets/svg/mobile.svg" class="rounded-lg  icon-img" alt="icons">
                                     <br>
                                     <h6>Fully Digital Process</h6>
@@ -225,7 +226,7 @@
                                         complete. No paperwork is required.</p>
                                 </div>
                                 <div
-                                    class="col-lg-3  py-3 d-flex flex-column justify-content-center align-items-center bg-white">
+                                    class="col-lg-3 my-2 py-3 d-flex flex-column justify-content-center align-items-center bg-white">
                                     <img src="assets/svg/e-light.svg" class="rounded-lg  icon-img" alt="icons">
                                     <br>
                                     <h6>Fast Disbursal</h6>
@@ -237,13 +238,14 @@
                             <button class="btn  apply-btn mt-5" id="apply-btn">Apply For lone</button>
                         </div>
                     </div>
-                    <div class="otp-section  bg-white mx-auto px-3 pt-4 pb-2" id="otp-section" style="display: none;" >
+                    <div class="otp-section mx-2  bg-white mx-auto px-3 pt-4 pb-2" id="otp-section"
+                        style="display: none;">
                         <h3>Login</h3>
                         <br>
                         <p>India</p>
                         <input type="text" class="form-control py-2" name="otp" id="otp"
                             placeholder="+91 Enter Your Mobile Number">
-                            <br>
+                        <br>
                         <input type="button" class="btn otp-btn btn-block py-3" value="Get Otp" id="get-otp">
                     </div>
                 </section>

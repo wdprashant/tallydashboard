@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -13,19 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
 <style>
-    .file-progress-bar {
-        border-radius: 25px;
-        overflow: hidden;
-        height: 6px;
-        margin: 10px 0;
-    }
-
-    .file-progress-bar .blue {
-        background-color: blue;
-        width: 0%;
-        height: 100%;
-        transition: width 0.3s ease;
-    }
+   
 </style>
 
 <body>
@@ -39,21 +28,21 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link  " href="index.html"> Dashboard </a>
+                        <a class="nav-link " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
-                        <a class="nav-link active" href="accountig.html"> Accounting </a>
+                        <a class="nav-link" href="accountig.html"> Accounting </a>
                     </li>
                     <li class="nav-item" id="drop">
                         <img src="assets/svg/sales.svg" alt="icons" />
                         <a class="nav-link" href="#">
                             Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
-                        <ul class="drop" id="drop2">
-                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
-                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
-                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item nav-link" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item nav-link" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item nav-link" href="Sales-order.html">Sales Order</a>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -62,8 +51,9 @@
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/document.svg" alt="icons" />
-                        <a class="nav-link " href="document.html"> Document </a>
+                        <a class="nav-link" href="document.html"> Document </a>
                     </li>
+
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
                         <a class="nav-link" href="Reports.html"> Reports </a>
@@ -89,7 +79,7 @@
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
                             <img src="assets/svg/dashboard.svg" alt="icons" />
-                            <a class="nav-link active" href="accountig.html"> Accounting </a>
+                            <a class="nav-link active" href="#" id="title-link"> Accounting </a>
                         </div>
                         <form action="">
                             <div class="d-flex " style="gap: 10px;">
@@ -134,6 +124,7 @@
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Purchase</a></div>
                                     <div class="menu-item"><a href="#">+ Receipt</a></div>
+
                                 </div>
                             </div>
                             <div>
@@ -178,6 +169,7 @@
                                     <a class="dropdown-item text-center" href="#">See all notifications</a>
                                 </div>
                             </div>
+
                             |
                             <div class="profile-section">
                                 <div class="dropdown">

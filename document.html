@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -12,6 +13,10 @@
     <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+<script>
+
+
+</script>
 
 <body>
     <div class="full-container">
@@ -24,7 +29,7 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
@@ -35,10 +40,10 @@
                         <a class="nav-link" href="#">
                             Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
-                        <ul class="drop" id="drop2">
-                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
-                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
-                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item nav-link" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item nav-link" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item nav-link" href="Sales-order.html">Sales Order</a>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -76,10 +81,10 @@
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
                             <img src="assets/svg/dashboard.svg" alt="icons" />
-                            <a class="nav-link active" href="#"> Document </a>
+                            <a class="nav-link active" href="#" id="title-link"> Document </a>
                         </div>
                         <form action="">
-                            <div class="d-flex " style="gap: 10px;">
+                            <div class="d-flex" style="gap: 10px">
                                 <div class="input-group">
                                     <div class="input-group-prepend">
                                         <div class="input-group-text">
@@ -89,20 +94,23 @@
                                     <input type="text" class="form-control bg" id="inlineFormInputGroup"
                                         placeholder="search" />
                                 </div>
-                                <input type="submit" class="px-4 rounded-lg search-btn" value="Search">
+                                <input type="submit" class="px-4 rounded-lg search-btn" value="Search" />
                             </div>
                         </form>
-                        <div class="d-flex align-items-center" style="gap: 20px;">
+                        <div class="d-flex align-items-center" style="gap: 20px">
                             <button class="fa-solid fa-plus px-2 py-2 menu-button" id="profileDropdown"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            </button>
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
                             <div class="menu-dropdown dropdown-menu dropdown-menu-right">
-                                <p><i class="textdark fa-solid fa-file mr-2"></i>Bulk Report</p>
-                                <hr class="bg w-full">
+                                <p>
+                                    <i class="textdark fa-solid fa-file mr-2"></i>Bulk Report
+                                </p>
+                                <hr class="bg w-full" />
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Banking</a></div>
                                     <div class="menu-item"><a href="#">+ Sales Return</a></div>
-                                    <div class="menu-item"><a href="#">+ Purchase Return</a></div>
+                                    <div class="menu-item">
+                                        <a href="#">+ Purchase Return</a>
+                                    </div>
                                     <div class="menu-item"><a href="#">+ Ledger</a></div>
                                 </div>
                                 <div class="menu-column">
@@ -116,12 +124,13 @@
                                     <div class="menu-item"><a href="#">+ Sales</a></div>
                                     <div class="menu-item"><a href="#">+ Payment</a></div>
                                     <div class="menu-item"><a href="#">+ Contra</a></div>
-                                    <div class="menu-item"><a href="#">+ Digital doc locker</a></div>
+                                    <div class="menu-item">
+                                        <a href="#">+ Digital doc locker</a>
+                                    </div>
                                 </div>
                                 <div class="menu-column">
                                     <div class="menu-item"><a href="#">+ Purchase</a></div>
                                     <div class="menu-item"><a href="#">+ Receipt</a></div>
-
                                 </div>
                             </div>
                             <div>
@@ -174,20 +183,18 @@
                                         id="profileDropdown" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false">
                                         <img src="assets/img/profile.jpg" alt="profile" height="25px" width="25px"
-                                            class="rounded-circle mr-2">
+                                            class="rounded-circle mr-2" />
                                         <span>Jenny</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-user-cog mr-2 ixt"></i>Manage
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog mr-2 ixt"></i>Manage
                                             Account</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 ixt"></i>Change
                                             Password</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 ixt"></i>Activity
                                             Log</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-sign-out-alt ixt"></i>Log
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt ixt"></i>Log
                                             out</a>
                                     </div>
                                 </div>
@@ -197,17 +204,92 @@
                 </header>
                 <!-- top header end -->
 
-                <!-- dashboard-content -->
-                <section>
-                   <h2>document</h2>
+                <!-- document-content -->
+                <section class="document-section px-3 py-3" id="document-section">
+                    <div class="unlock-digi-locker"></div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <div>
+                            <h3 class="accounting-heading text-left" id="main-heading">
+                                Document Repository
+                            </h3>
+                            <p>
+                                A document repository is a secure, centralized digital storage
+                                system that organizes, manages, and enables <br />
+                                efficient retrieval, sharing, and collaboration of files using
+                                metadata, indexing, version control, audit trails, and
+                                <br />permission settings.
+                            </p>
+                        </div>
+                        <a href="digilocker.html" class="btn" id="digi-locker-btn">
+                            <img src="assets/svg/file_lock.svg" alt="" /> Try Digi locker
+                        </a>
+                    </div>
+                    <hr />
+                    <form action="">
+                        <div class="d-flex p-">
+                            <div class="col-lg-9 col-md-8 col-sm-8 pl-0">
+                                <input type="text" class="form-control" name="filter" id="serch-filter" />
+                            </div>
+                            <button class="btn btn-filter py-1" id="filter">
+                                <i class="fa-solid fa-search"></i> Search
+                            </button>
+                        </div>
+                    </form>
+                    <div class="documents pt-3" id="documents">
+                        <div class="file-section" id="file-section">
+                            <div class="file" id="show-submit-document">
+                                <img src="assets/svg/folder.svg" alt="">
+                                <p class="file-name">Submitted Document</p>
+                            </div>
+                            <div class="file" id="show-fiscal-year">
+                                <img src="assets/svg/folder.svg" alt="">
+                                <p class="file-name">Fiscal Year 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- submit document -->
+                    <div id="submit-document" style="display: none;">
+                        <div class="d-flex flex-wrap" style="gap: 20px;">
+                            <!-- uploaded-pdf -->
+                            <img src="assets/svg/document_pdf.svg" class="mx-2" height="180px" width="100px"
+                                alt="uploaded-dcument">
+                            <img src="assets/svg/document_pdf.svg" class="mx-2" height="180px" width="100px"
+                                alt="uploaded-dcument">
+                            <img src="assets/svg/document_pdf.svg" class="mx-2" height="180px" width="100px"
+                                alt="uploaded-dcument">
+                            <img src="assets/svg/document_pdf.svg" class="mx-2" height="180px" width="100px"
+                                alt="uploaded-dcument">
+                            <!-- uploaded-pdf -->
+                        </div>
+                    </div>
+                    <!-- fiscal year -->
+                    <div id="Fiscal-Year" style="display: none;">
+                        <div class="d-flex fles-wrap " style="gap: 20px;" id="fiscal-year-document">
+                            <!-- sales  -->
+                            <a href="sales_monthly_data.html" class="file" id="Sales">
+                                <img src="assets/svg/folder.svg" id="sales" alt="folder">
+                                <p class="file-name">Sales</p>
+                            </a>
+                            <!-- sales  -->
+                            <a href="purchase_monthly_data.html" class="file" id="purchase">
+                                <img src="assets/svg/folder.svg" id="Purchage" alt="folder">
+                                <p class="file-name">Purchage</p>
+                            </a>
+                            <a href="Banking_monthly_data.html" class="file" id="Banking">
+                                <img src="assets/svg/folder.svg" alt="folder">
+                                <p class="file-name">Banking</p>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- fiscal year -->
+                    <footer class="footer bg">
+                        <button class="btn back-btn" id="d-back-btn"><i
+                                class="fa-solid fa-arrow-left mr-2"></i>back
+                        </button>
+                    </footer>
                 </section>
-                <!-- dashboard-content -->
-
-
+                <!-- document-content -->
             </div>
-
-
-
         </div>
     </div>
 </body>

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -12,6 +13,9 @@
     <script src="assets/js/script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 </head>
+<style>
+
+</style>
 
 <body>
     <div class="full-container">
@@ -24,7 +28,7 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active " href="index.html"> Dashboard </a>
+                        <a class="nav-link " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
@@ -35,10 +39,10 @@
                         <a class="nav-link" href="#">
                             Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
-                        <ul class="drop" id="drop2">
-                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
-                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
-                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item nav-link" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item nav-link" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item nav-link" href="Sales-order.html">Sales Order</a>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -76,7 +80,7 @@
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
                             <img src="assets/svg/dashboard.svg" alt="icons" />
-                            <a class="nav-link active" href="#"> Dashboard </a>
+                            <a class="nav-link active" href="#" id="title-link">Sales Invoice</a>
                         </div>
                         <form action="">
                             <div class="d-flex " style="gap: 10px;">
@@ -178,16 +182,14 @@
                                         <span>Jenny</span>
                                     </a>
                                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="profileDropdown">
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-user-cog mr-2 ixt"></i>Manage
+                                        <a class="dropdown-item" href="#"><i class="fas fa-user-cog mr-2 ixt"></i>Manage
                                             Account</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-key mr-2 ixt"></i>Change
                                             Password</a>
                                         <a class="dropdown-item" href="#"><i class="fas fa-list mr-2 ixt"></i>Activity
                                             Log</a>
                                         <div class="dropdown-divider"></div>
-                                        <a class="dropdown-item" href="#"><i
-                                                class="fas fa-sign-out-alt ixt"></i>Log
+                                        <a class="dropdown-item" href="#"><i class="fas fa-sign-out-alt ixt"></i>Log
                                             out</a>
                                     </div>
                                 </div>
@@ -199,16 +201,218 @@
 
                 <!-- dashboard-content -->
                 <section>
-                   <h2>document</h2>
-                </section>
-                <!-- dashboard-content -->
+                    <div class="container-fluid ">
+                        <div class="invoice-section" id="invoice-section">
+                            <img src="assets/img/upload_document.png" class="" alt="upload_document">
+                            <h3 class="accounting-heading mt-3">Create your Invoice </h3>
+                            <p>"Generate your digital invoice quickly and efficiently with our easy-to-use platform."
+                            </p>
+                            <button class="btn px-5 mt-2 " id="invoice-btn">Create Your Invoice</button>
+                        </div>
+                    </div>
+                    <div id="invoice-generate" style="display: none;" class="py-0">
+                        <div class="container-fluid pb-0">
+                            <div class="row px-4 py-2  justify-content-between bg-white">
+                                <div class="bread-crumb">
+                                    <nav aria-label="breadcrumb">
+                                        sales-invoice <span style="color: rgba(22, 64, 193, 1);"> > Create you
+                                            Invoice</span>
+                                    </nav>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-print fa-icon  text-secondary"></i>
+                                    <i class="fa-solid fa-save  fa-icon text-secondary"></i>
+                                    <i class="fa-solid fa-share fa-icon  text-secondary"></i>
+                                    <i class="fa-solid fa-share fa-icon fa-x" id="back-invoice"></i>
+                                </div>
+                            </div>
+                            <form action="" method="post">
+                                <div class="switch-container d-flex " style="gap: 10px;">
+                                    <label for="paymentSwitch" id="creditLabel">Credit</label>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="paymentSwitch">
+                                        <label class="custom-control-label" for="paymentSwitch"
+                                            id="paymentLabel"></label>
+                                    </div>
+                                    <label for="paymentSwitch" id="cashLabel">Cash</label>
+                                </div>
+                                <div class="form-row row mb-3 justify-content-between ">
+                                    <div class="col-lg-7 d-flex flex-wrap">
+                                        <div class="col">
+                                            <input type="text" class="form-contro invoice-form"
+                                                placeholder="Search by Name/Phone" required>
+                                        </div>
+                                        <div class="col">
+                                            <input type="text" class="form-contro invoice-form" placeholder="Phone No.">
+                                        </div>
+                                        <div id="cash-fields" class="mt-3">
+                                            <div class="d-flex flex-wrap ">
+                                                <div class="col">
+                                                    <input type="text" class="form-contro invoice-form"
+                                                        placeholder="Billing Name (Optional)" required>
+                                                </div>
+                                                <div class="col">
+                                                    <textarea type="text"
+                                                        class="form-contro invoice-form billing-address"
+                                                        placeholder="Billing Address"></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 ">
+                                        <div class="d-flex my-2  justify-content-around">Ref-no . <input type="text"
+                                                class="invoice-ref-no" name="Ref No." id="Ref No." name="Ref No.">
+                                        </div>
+                                        <div class="d-flex my-2  justify-content-around" style="gap: 20px;">Invoice
+                                            Date.
+                                            <input type="date" class="invoice-date" name="Invoice Date"
+                                                id="Invoice Date" name="Invoice Date">
+                                        </div>
+                                        <div class="d-flex my-2  justify-content-around">
+                                            State of Supply
+                                            <select class="invoice-form-select bg-white">
+                                                <option selected>Select</option>
+                                                <option value="AndhraPradesh">AndhraPradesh</option>
+                                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                                <option value="Assam">Assam</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                </div>
 
 
+                                <div class="table-responsive invoice-table">
+                                    <table class="table table-bordered bg-white mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Item</th>
+                                                <th>Qty</th>
+                                                <th>Unit</th>
+                                                <th>Price/Unit</th>
+                                                <th>Discount</th>
+                                                <th>Tax</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="invoice-body">
+                                            <tr>
+                                                <td>1</td>
+                                                <td><input type="text" class="form-contro form-control-xts"
+                                                        placeholder="Item"></td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Qty"></td>
+                                                <td>
+                                                    <select class="select-drop">
+                                                        <option>None</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Price/Unit" step="0.01"></td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Discount" step="0.01"></td>
+                                                <td>
+                                                    <select class="select-drop">
+                                                        <option>Select</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Amount" step="0.01" readonly></td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td><input type="text" class="form-contro form-control-xts"
+                                                        placeholder="Item"></td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Qty"></td>
+                                                <td>
+                                                    <select class="select-drop">
+                                                        <option>None</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Price/Unit" step="0.01"></td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Discount" step="0.01"></td>
+                                                <td>
+                                                    <select class="select-drop">
+                                                        <option>Select</option>
+                                                    </select>
+                                                </td>
+                                                <td><input type="number" class="form-contro form-control-xts"
+                                                        placeholder="Amount" step="0.01" readonly></td>
+
+                                            </tr>
+                                            <tr class="bg-white text-right">
+                                                <td></td>
+                                                <td class="col d-flex justify-content-between "> <button id="add-row"
+                                                        class="btn btn-outline-primary">Add Row</button>
+                                                    <p>Total</p>
+                                                </td>
+                                                <td>
+                                                    <p>0</p>
+                                                </td>
+                                                <td>
+
+                                                </td>
+                                                <td></td>
+                                                <td>
+                                                    <p>0</p>
+                                                </td>
+                                                <td>
+                                                    <p>0</p>
+                                                </td>
+                                                <td>
+                                                    0
+                                                </td>
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>5
+                                <div class="form row mt-0 mb-5 justify-content-between">
+                                    <div class="col-lg-3 ">
+                                        <textarea class="form-control my-1" placeholder="Description"></textarea>
+                                       Add Image <input type="file" class="bg my-2 " placeholder="Add Image" ></input> 
+                                       Add Document <input type="file" class="bg my-2 " placeholder="Add Document"></input>
+                                    </div>
+                                    <div class="col-lg-9">
+                                        <div class="row align-items-center justify-content-end ">
+                                            <div class="col-lg-2">
+                                                <input type="checkbox"> <span>Round-off</span>
+                                            </div>
+                                            <div class="col-lg-2">
+                                                <input type="text" class="form-control" name="round-off" id="">
+                                            </div>
+                                            <div class="col-lg-4 ">
+                                                Total
+                                                <input type="text" class="form-control" name="round-off" id="">
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </form>
+                        </div>
+                        <div class="btn-save-share py-2">
+                            <button class="btn ">Share <i class="fa-solid fa-share ml-3"></i></button>
+                            <button class="btn">Save</button>
+                        </div>
+                    </div>
             </div>
-
+            </section>
+            <!-- dashboard-content -->
 
 
         </div>
+
+
+
+    </div>
     </div>
 </body>
 

@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
@@ -26,7 +27,7 @@
                 <ul class="nav" id="nav">
                     <li class="nav-item">
                         <img src="assets/svg/dashboard.svg" alt="icons" />
-                        <a class="nav-link active" href="index.html"> Dashboard </a>
+                        <a class="nav-link " href="index.html"> Dashboard </a>
                     </li>
                     <li class="nav-item">
                         <img src="assets/svg/accounting.svg" alt="icons" />
@@ -35,12 +36,12 @@
                     <li class="nav-item" id="drop">
                         <img src="assets/svg/sales.svg" alt="icons" />
                         <a class="nav-link" href="#">
-                            Sales<i class="fa-solid ml-3 fa-chevron-down" style="font-size: 14px"></i>
+                            Sales<i class="fa-solid ml-3 fa-chevron-down " style="font-size: 14px;"></i>
                         </a>
-                        <ul class="drop" id="drop2">
-                            <a class="dropdown-item year" href="sales-invoice.html">Sales Invoice</a>
-                            <a class="dropdown-item year" href="Quotations.html">Estimate/Quotations</a>
-                            <a class="dropdown-item year" href="Sales-order.html">Sales Order</a>
+                        <ul class="drop" id="drop2" style="display: none;">
+                            <a class="dropdown-item nav-link" href="sales-invoice.html">Sales Invoice</a>
+                            <a class="dropdown-item nav-link" href="Quotations.html">Estimate/Quotations</a>
+                            <a class="dropdown-item nav-link" href="Sales-order.html">Sales Order</a>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -51,6 +52,7 @@
                         <img src="assets/svg/document.svg" alt="icons" />
                         <a class="nav-link" href="document.html"> Document </a>
                     </li>
+
                     <li class="nav-item">
                         <img src="assets/svg/features.svg" alt="icons" />
                         <a class="nav-link" href="Reports.html"> Reports </a>
@@ -76,7 +78,7 @@
                     <div class="navbar-section">
                         <div class="nav-item d-flex">
                             <img src="assets/svg/dashboard.svg" alt="icons" />
-                            <a class="nav-link active" href="#"> Dashboard </a>
+                            <a class="nav-link active" href="#" id="title-link"> Index</a>
                         </div>
                         <form action="">
                             <div class="d-flex" style="gap: 10px">
@@ -558,18 +560,322 @@
                                                 <div class="row">
                                                     <div class="col-lg-4 col-md-4 col-sm-4">
                                                         <!-- spinner-progress -->
-                                                        spnner progress bar
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
                                                         <!-- spinner-progress -->
                                                     </div>
-                                                    <div class="col-lg-4 col-md-4 col-sm-4">1</div>
-                                                    <div class="col-lg-4 col-md-4 col-sm-4">1</div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <!-- spinner-progress -->
+                                                        <div class="progress blue">
+                                                            <span class="progress-left">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <span class="progress-right">
+                                                                <span class="progress-bar"></span>
+                                                            </span>
+                                                            <div class="progress-value">90%</div>
+                                                            <span class="progress-background"></span>
+                                                        </div>
+                                                        <!-- spinner-progress -->
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <div class="budget-hours">
+                                                            <div class="budget-used" style="width: 50%;"></div>
+                                                            <div class="budget-over" style="width: 50%;"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div class="tab-pane fade" id="pills-profile" role="tabpanel"
                                                 aria-labelledby="pills-profile-tab">
                                                 <div class="row">
-                                                    <div class="col-lg-4 col-md-4 col-sm-4">2</div>
-                                                    <div class="col-lg-4 col-md-4 col-sm-4">2</div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
+                                                    <div class="col-lg-4 col-md-4 col-sm-4">
+                                                        <b>
+                                                            <p class="text-primary">Lorem Ipsum has been </p>
+                                                        </b>
+                                                        <p>John Smith Cus...</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -623,6 +929,8 @@
             </div>
         </div>
     </div>
+
 </body>
+
 
 </html>
